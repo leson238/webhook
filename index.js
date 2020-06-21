@@ -50,7 +50,8 @@ function handleMessage(sender_psid, received_message) {
             "text": `Please give me your location`,
             "quick_replies": {
               "content-type": "text", 
-              "title": "test",             
+              "title": "test",  
+              "payload": "test",           
             }
         }
     } else if (received_message.attachments) {
