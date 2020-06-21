@@ -4,7 +4,8 @@
   "description": "webhook",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node index.js"
   },
   "author": "Mew",
   "license": "ISC",
