@@ -49,7 +49,7 @@ function handleMessage(sender_psid, received_message) {
         response = {
             "text": `Please give me your location`,
             "quick_replies": [{
-              "content-type": "text", 
+              "content_type": "text", 
               "title": "test",  
               "payload": "test",           
             }],
