@@ -47,7 +47,10 @@ function handleMessage(sender_psid, received_message) {
     let response;
     if (received_message.text) {
         response = {
-            "text": `You send the message: "${received_message.text}". Now send me an image!`
+            "text": `Please give me your location`,
+            "quick_replies": {
+              "content-type": "location",              
+            }
         }
     } else if (received_message.attachments) {
         let attachment_url = received_message.attachments[0].payload.url
@@ -94,6 +97,9 @@ function handlePostback(sender_psid, received_postback) {
       response = { "text": "Oops, try sending another image." }
     }
     // Send the message to acknowledge the postback
+    if (payload.coordinates) {
+      response = {"text": `Your coordinates is ${payload.coordinates}`}
+    }
     callSendAPI(sender_psid, response);
 }
 
