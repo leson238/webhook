@@ -81,6 +81,7 @@ function handleMessage(sender_psid, received_message) {
             }
           }
     }
+    console.log(response)
     callSendAPI(sender_psid, response)
 }
 
@@ -126,4 +127,3 @@ function callSendAPI(sender_psid, response) {
       }); 
       
 }
-
