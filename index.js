@@ -32,5 +32,5 @@ app.get("/webhook", (req, res) => {
         }
     }
 
-    res.send(req.body)
+    res.send("Up and running")
 })
