@@ -48,11 +48,11 @@ function handleMessage(sender_psid, received_message) {
     if (received_message.text) {
         response = {
             "text": `Please give me your location`,
-            "quick_replies": {
+            "quick_replies": [{
               "content-type": "text", 
               "title": "test",  
               "payload": "test",           
-            }
+            }]
         }
     } else if (received_message.attachments) {
         let attachment_url = received_message.attachments[0].payload.url
